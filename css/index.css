@@ -160,7 +160,7 @@
 
     .main__section--title {
         letter-spacing: normal;
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .main__section--subtitle {
@@ -184,5 +184,15 @@
 
     .card__text {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .main__section--title {
+        font-size: 2.8rem;
+    }
+
+    .card__title {
+        font-size: 2rem;
     }
 }

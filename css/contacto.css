@@ -119,4 +119,19 @@
     .form__input, .form__label {
         font-size: 0.9rem;
     }
+
+    .main__section--contact {
+        height: auto;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .form__input {
+        font-size: 0.8rem;
+    }
+
+    .form button {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
 }

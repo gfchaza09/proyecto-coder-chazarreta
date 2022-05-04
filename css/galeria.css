@@ -161,6 +161,7 @@
         display: block;
         width: 100%;
         padding: 20px;
+        margin: 0px auto;
         background-color: #000;
         color: #dfdfdf;
         border-radius: 3px;
@@ -196,4 +197,10 @@
         height: 200px;
     }
 
+}
+
+@media screen and (max-width:480px) {
+    .main {
+        margin-top: 160px;
+    }
 }
