@@ -100,6 +100,87 @@
     height: 100%;
     object-fit: cover;
     border-radius: 4px;
+    position: relative;
+}
+
+.gallery__photo--1:hover{
+    animation-name: agrandar-1;
+    animation-duration: 3s;
+    z-index: 50;
+}
+
+.gallery__photo--2:hover{
+    animation-name: agrandar-2;
+    animation-duration: 3s;
+    z-index: 50;
+}
+
+.gallery__photo--3:hover{
+    animation-name: agrandar-3;
+    animation-duration: 3s;
+    z-index: 50;
+}
+
+.gallery__photo--4:hover{
+    animation-name: agrandar-4;
+    animation-duration: 3s;
+    z-index: 50;
+}
+
+@keyframes agrandar-1 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2.1) translateX(78px) translateY(76px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes agrandar-2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2.1) translateX(-78px) translateY(76px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes agrandar-3 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2.1) translateX(78px) translateY(-76px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes agrandar-4 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2.1) translateX(-78px) translateY(-76px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media screen and (max-width:980px) {
@@ -199,7 +280,7 @@
 
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:360px) {
     .main {
         margin-top: 160px;
     }
