@@ -127,6 +127,8 @@
     z-index: 50;
 }
 
+/* Animaciones escritorio */
+
 @keyframes agrandar-1 {
     0% {
         transform: scale(1);
@@ -183,6 +185,122 @@
     }
 }
 
+/* Animaciones mobile y tablets */
+
+@keyframes agrandar980-1 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2) translateY(76px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes agrandar980-2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes agrandar980-3 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes agrandar980-4 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2)  translateY(-76px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animaciones mobile */
+
+@keyframes agrandar480-1 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2.1) translateX(50px) translateY(52px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes agrandar480-2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2.1) translateX(-50px) translateY(52px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes agrandar480-3 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2.1) translateX(50px) translateY(-48px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes agrandar480-4 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2.1) translateX(-50px) translateY(-48px);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 @media screen and (max-width:980px) {
 
     .list {
@@ -196,6 +314,22 @@
     .gallery__photos {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
+    }
+
+    .gallery__photo--1:hover{
+        animation-name: agrandar980-1;
+    }
+    
+    .gallery__photo--2:hover{
+        animation-name: agrandar980-2;
+    }
+    
+    .gallery__photo--3:hover{
+        animation-name: agrandar980-3;
+    }
+    
+    .gallery__photo--4:hover{
+        animation-name: agrandar980-4;
     }
 }
 
@@ -276,6 +410,22 @@
     .gallery__photos div {
         width: 200px;
         height: 200px;
+    }
+
+    .gallery__photo--1:hover{
+        animation-name: agrandar480-1;
+    }
+    
+    .gallery__photo--2:hover{
+        animation-name: agrandar480-2;
+    }
+    
+    .gallery__photo--3:hover{
+        animation-name: agrandar480-3;
+    }
+    
+    .gallery__photo--4:hover{
+        animation-name: agrandar480-4;
     }
 
 }
