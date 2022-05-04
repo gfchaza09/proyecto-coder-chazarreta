@@ -14,6 +14,8 @@
 
 .article {
     background-color: #FFD980;
+    max-width: 1400px;
+    margin: 0px auto;
 }
 
 .article__header {

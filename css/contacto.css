@@ -1,9 +1,12 @@
 .main__section--contact {
     height: 90vh;
+    max-width: 1400px;
+    margin: 0px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: stretch;
     align-items: stretch;
+    background-color: #FFD980;
 }
 
 .container {
@@ -30,7 +33,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 600px;
-    background-color: #FFD980;
+    background-color: #CCA752;
     padding: 15px 30px;
     margin-top: 20px;
     border: 2px solid rgb(102, 78, 20);
