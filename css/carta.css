@@ -1,5 +1,6 @@
 .main__title {
     font-size: 3rem;
+    font-weight: 700;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.2),
@@ -9,6 +10,7 @@
     background-size: cover;
     background-position: 0px;
     padding: 50px;
+    margin-bottom: 0px;
     text-align: center;
     letter-spacing: 2px;
     color: #dfdfdf;
@@ -29,6 +31,7 @@
 }
 
 .pizzas, .empanadas, .bebidas, .postres {
+    font-weight: 700;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
@@ -95,6 +98,8 @@
 
 .card__text h4 {
     margin-bottom: 5px;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 @media screen and (max-width:980px) {

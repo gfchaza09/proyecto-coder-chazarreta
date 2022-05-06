@@ -19,10 +19,12 @@
 .main__section--title {
     font-size: 5rem;
     letter-spacing: 10px;
+    font-weight: 700;
 }
 
 .main__section--subtitle {
     font-size: 2rem;
+    font-weight: 700;
     margin-top: 150px;
     letter-spacing: 2px;
 }
@@ -53,7 +55,7 @@
     width: 40%;
 }
 
-.card {
+.card__content {
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -62,6 +64,7 @@
 
 .card__title {
     font-size: 3.5rem;
+    font-weight: 700;
     text-align: center;
     margin-top: 20px;
 }
@@ -121,7 +124,7 @@
         margin: 0 auto;
     }
 
-    .card {
+    .card__content {
         width: 100%;
     }
 

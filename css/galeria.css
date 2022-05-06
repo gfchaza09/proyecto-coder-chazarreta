@@ -4,6 +4,7 @@
 
 .main__title {
     font-size: 3rem;
+    font-weight: 700;
     text-align: center;
     margin-top: 160px;
 }
@@ -19,6 +20,10 @@
     margin: 20px auto;
     border-radius: 5px;
     padding: 10px;
+}
+
+ul {
+    padding-left: 0px;
 }
 
 .list {
@@ -46,24 +51,16 @@
     text-decoration: underline;
 }
 
+.gallery {
+    min-height: 500px;
+}
+
+.gallery__container {
+    max-height: 800px;
+}
+
 .mobile__title {
     display: none;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 700px;
-    justify-items: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.gallery__photos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 5px;
 }
 
 #establecimiento, #pizza-varios, #nuestra-gente, #personas-personajes {
@@ -71,60 +68,12 @@
 }
 
 #establecimiento:target, #pizza-varios:target, #nuestra-gente:target, #personas-personajes:target {
-    display: grid;
+    display: block;
 }
 
-.gallery__btn {
-    background-color: #000;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    color: #dfdfdf;
-    font-size: 1.2rem;
-}
-
-.gallery__btn:hover {
-    outline: 2px solid #dfdfdf;
-}
-
-.gallery__photos div {
-    width: 300px;
-    height: 300px;
-}
-
-.gallery__photos div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-    position: relative;
-}
-
-.gallery__photo--1:hover{
-    animation-name: agrandar-1;
-    animation-duration: 3s;
-    z-index: 50;
-}
-
-.gallery__photo--2:hover{
-    animation-name: agrandar-2;
-    animation-duration: 3s;
-    z-index: 50;
-}
-
-.gallery__photo--3:hover{
-    animation-name: agrandar-3;
-    animation-duration: 3s;
-    z-index: 50;
-}
-
-.gallery__photo--4:hover{
-    animation-name: agrandar-4;
-    animation-duration: 3s;
-    z-index: 50;
+.gallery__photo {
+    width: 80%;
+    margin: 0px auto;
 }
 
 /* Animaciones escritorio */
@@ -307,30 +256,6 @@
         font-size: 0.8rem;
     }
 
-    .gallery {
-        grid-template-rows: 1300px;
-    }
-
-    .gallery__photos {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-    }
-
-    .gallery__photo--1:hover{
-        animation-name: agrandar980-1;
-    }
-    
-    .gallery__photo--2:hover{
-        animation-name: agrandar980-2;
-    }
-    
-    .gallery__photo--3:hover{
-        animation-name: agrandar980-3;
-    }
-    
-    .gallery__photo--4:hover{
-        animation-name: agrandar980-4;
-    }
 }
 
 @media screen and (max-width:810px) {
@@ -393,39 +318,11 @@
     }
 
     #establecimiento, #pizza-varios, #nuestra-gente, #personas-personajes {
-        display: grid;
-    }
-
-    .gallery__photos {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        margin: 10px 0px 50px;
-        justify-items: center;
+        display: block;
     }
 
     #personas-personajes {
         margin-bottom: 60px;
-    }
-
-    .gallery__photos div {
-        width: 200px;
-        height: 200px;
-    }
-
-    .gallery__photo--1:hover{
-        animation-name: agrandar480-1;
-    }
-    
-    .gallery__photo--2:hover{
-        animation-name: agrandar480-2;
-    }
-    
-    .gallery__photo--3:hover{
-        animation-name: agrandar480-3;
-    }
-    
-    .gallery__photo--4:hover{
-        animation-name: agrandar480-4;
     }
 
 }
