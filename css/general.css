@@ -13,11 +13,11 @@ body {
     margin-bottom: 0rem !important;
     font-weight: 700 !important;
     line-height: 1 !important;
-}
+} */
 
 ul {
     padding-left: 0px !important;
-} */
+}
 
 .main {
     margin-top: 130px;
@@ -89,6 +89,10 @@ ul {
 
 .btn__menu {
     display: none;
+}
+
+.btn__menu a:hover {
+    color: #dfdfdf;
 }
 
 /* Estilos de la barra de navegacion - Final */

@@ -101,9 +101,16 @@
     outline: 2px solid #dfdfdf;
 }
 
+@media screen and (max-width:960px) {
+    .main__section--contact {
+        height: 95vh;
+    }
+}
+
 @media screen and (max-width:720px) {
     .main__section--contact {
         display: block;
+        height: 90vh;
         background-image: url("https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxjb250YWN0fGVufDB8fHx8MTY1MDIyMjEyOA&ixlib=rb-1.2.1&q=80&w=1080");
         background-size: cover;
     }

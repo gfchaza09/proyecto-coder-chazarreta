@@ -36,6 +36,7 @@
     background-size: cover;
     background-position: 0px;
     letter-spacing: 2px;
+    margin-bottom: 0px;
 }
 
 .pizzas {
@@ -70,26 +71,9 @@
        ), url("https://images.unsplash.com/photo-1589660117682-0728d988a2d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHwxfHx0b3J0YXxlbnwwfHx8fDE2NTAyMzIzNDQ&ixlib=rb-1.2.1&q=80&w=1080");
 }
 
-.section__cards {
-    display: grid;
-    max-width: 1400px;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-}
-
 .section__card {
-    background-color: #FFD980;
-    width: 300px;
-    border-radius: 10px;
-    margin: 20px 10px;
-}
-
-.section__card img {
-    width: 300px;
-    height: 200px;
-    border-radius: 10px 10px 0px 0px;
-    object-fit: cover;
+    background-color: #FFD980 !important;
+    width: 18rem;
 }
 
 .card__text {
@@ -97,30 +81,20 @@
 }
 
 .card__text h4 {
-    margin-bottom: 5px;
     font-size: 1.25rem;
     font-weight: 700;
 }
 
-@media screen and (max-width:980px) {
-    .section__cards {
-        grid-template-columns: repeat(2, 1fr);
+@media screen and (max-width:767px) {
+    .section__card {
+        width: 25rem;
     }
 }
 
 @media screen and (max-width:660px) {
-    .section__cards {
-        grid-template-columns: auto;
-        grid-template-rows: repeat(3, 1fr);
-    }
 
     .section__card {
-        width: 400px;
-    }
-
-    .section__card img {
-        width: 400px;
-        height: 250px;
+        width: 22rem;
     }
 }
 
@@ -143,12 +117,7 @@
     }
 
     .section__card {
-        width: 100%;
-        margin: 40px 0px 30px;
-    }
-
-    .section__card img {
-        width: 100%;
+        width: 20rem;
     }
 
 }

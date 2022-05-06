@@ -113,25 +113,25 @@
           <h4>NEWSLETTER</h4>
           <p>Enterate de noticias, eventos y descuentos</p>
           <!-- Button NEWSLETTER -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn btn-light btn-news" data-bs-toggle="modal" data-bs-target="#newsletter">
             SUSCRIBIRSE
           </button>
           <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="newsletter" tabindex="-1" aria-labelledby="newsletterLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Ingresa tu email para suscribirte.</h5>
+                  <h5 class="modal-title text-dark" id="newsletterLabel">Ingresa tu email para suscribirte.</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <form>
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <label for="newsletterEmail" class="form-label text-dark">Correo electrónico: </label>
+                      <input type="email" class="form-control" id="newsletterEmail" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">No compartiremos tu email con nadie más.</div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-warning">Suscribirse</button>
                   </form>
                 </div>
               </div>
