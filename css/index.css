@@ -18,18 +18,24 @@
 
 .main__section--title {
     font-size: 5rem;
+    font-weight: 700;
     letter-spacing: 10px;
+    line-height: 1;
+    margin-bottom: 0px;
 }
 
 .main__section--subtitle {
     font-size: 2rem;
-    margin-top: 150px;
+    font-weight: 700;
+    margin: 150px 0px 0px;
     letter-spacing: 2px;
+    line-height: 1.5;
 }
 
 .main__section--hashtag {
     font-size: 4rem;
     font-style: italic;
+    margin-bottom: 0px;
 }
 
 /* Estilos de la sección de tarjetas - Inicio */
@@ -53,7 +59,7 @@
     width: 40%;
 }
 
-.card {
+.card__content {
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -62,15 +68,16 @@
 
 .card__title {
     font-size: 3.5rem;
+    font-weight: 700;
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 10px 0px;
 }
 
 .card__text {
     font-size: 1.5rem;
     text-align: left;
     padding: 0px 80px 0px 50px;
-    margin-top: 20px;
+    margin: 20px 0px 0px;
 }
 
 .card__btn {
@@ -89,6 +96,10 @@
 
 .card__btn:hover {
     outline: 2px solid #dfdfdf;
+}
+
+.card__btn:hover a {
+    color: #fdfdfd;
 }
 
 .card__btn a {
@@ -121,7 +132,7 @@
         margin: 0 auto;
     }
 
-    .card {
+    .card__content {
         width: 100%;
     }
 

@@ -1,12 +1,15 @@
 .section__events--title {
     font-size: 3rem;
+    font-weight: 700;
     letter-spacing: 2px;
+    line-height: 1;
     width: 100%;
     height: 300px;
     color: #dfdfdf;
     text-align: center;
     text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
     padding: 100px 30px;
+    margin-bottom: 0px;
     background-image: url("https://images.unsplash.com/photo-1517457373958-b7bdd4587205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxldmVudHxlbnwwfHx8fDE2NTAyMjUwMDE&ixlib=rb-1.2.1&q=80&w=1080");
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,6 +28,13 @@
     justify-content: space-between;
     padding: 30px 20px;
     letter-spacing: 1.5px;
+}
+
+.article__header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    line-height: 1;
 }
 
 .article__content {
@@ -50,7 +60,7 @@
     margin-bottom: 50px;
 }
 
-.article__content--text button {
+.btn__read {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     border: none;
@@ -61,14 +71,13 @@
     box-shadow: 8px 8px 10px 2px rgba(0,0,0,0.85);
 }
 
-.article__content--text button:hover {
+.btn__read:hover {
     text-decoration: underline;
     outline: 2px solid #dfdfdf;
 }
 
-.article__content--text button a {
-    color: #dfdfdf;
-    text-decoration: none;
+.article__content--text div p {
+    margin-top: 1.5rem;
 }
 
 @media screen and (max-width:860px) {

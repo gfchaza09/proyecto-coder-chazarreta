@@ -9,7 +9,7 @@
     background-color: #FFD980;
 }
 
-.container {
+.container__contact {
     padding: 30px;
 }
 
@@ -19,16 +19,18 @@
     background-size: cover;
 }
 
-.container h2 {
+.container__contact h2 {
     font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+}
+
+.container__contact p {
     text-align: center;
 }
 
-.container p {
-    text-align: center;
-}
-
-.form {
+.form__contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,7 +42,7 @@
     border-radius: 10px;
 }
 
-.form div {
+.form__contact div {
     display: flex;
     flex-direction: column;
 }
@@ -65,12 +67,12 @@
     outline: none;
 }
 
-.form div label:last-child {
+.form__contact div label:last-child {
     font-size: 12px;
     text-align: center;
 }
 
-.form button {
+.form__contact button {
     width: 100%;
     background-color: #000;
     color: #dfdfdf;
@@ -86,32 +88,39 @@
     border-radius: 5px;
 }
 
-.form button i {
+.form__contact button i {
     margin-right: 8px;
     transition: margin-right .8s;
 }
 
-.form button:hover i {
+.form__contact button:hover i {
     margin-right: 16px;
 }
 
-.form button:hover {
+.form__contact button:hover {
     outline: 2px solid #dfdfdf;
+}
+
+@media screen and (max-width:960px) {
+    .main__section--contact {
+        height: 95vh;
+    }
 }
 
 @media screen and (max-width:720px) {
     .main__section--contact {
         display: block;
+        height: 90vh;
         background-image: url("https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxjb250YWN0fGVufDB8fHx8MTY1MDIyMjEyOA&ixlib=rb-1.2.1&q=80&w=1080");
         background-size: cover;
     }
 
-    .container h2, .container p {
+    .container__contact h2, .container__contact p {
         color: #dfdfdf;
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
     }
 
-    .form {
+    .form__contact {
         background-color: rgb(255, 217, 128, 0.5);
     }
 
@@ -133,7 +142,7 @@
         font-size: 0.8rem;
     }
 
-    .form button {
+    .form__contact button {
         font-size: 1rem;
         letter-spacing: 1.5px;
     }

@@ -5,15 +5,25 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #CCA752;
+    font-family: 'Poppins', sans-serif !important; 
+    background-color: #CCA752 !important;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+} */
+
+ul {
+    padding-left: 0px !important;
 }
 
 .main {
     margin-top: 130px;
 }
 
-.btn {
+.btn__general {
     width: 160px;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
@@ -81,6 +91,10 @@ body {
     display: none;
 }
 
+.btn__menu a:hover {
+    color: #dfdfdf;
+}
+
 /* Estilos de la barra de navegacion - Final */
 
 /* Estilos del Footer */
@@ -126,6 +140,9 @@ body {
 .footer__nav--container h4{
     font-size: 20px;
     letter-spacing: 1.5px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0px;
 }
 
 .footer__nav--container p{
@@ -138,9 +155,24 @@ body {
     height: 250px;
 }
 
+.btn-news {
+    padding: 1rem 1.5rem !important;
+    border-radius: 10px !important;
+    box-shadow: 8px 8px 10px 2px rgb(0 0 0 / 85%);
+}
+
 .btn-news:hover {
     outline: 2px solid #0e0e0e;
     text-decoration: underline;
+}
+
+.form-control:focus {
+    border-color: #ced4da !important;
+    box-shadow: none !important;
+}
+
+.btn-warning:hover {
+    outline: 2px solid #0e0e0e;
 }
 
 .footer__nav--container a {
@@ -174,6 +206,10 @@ body {
     text-align: center;
     font-size: 14px;
     padding: 18px;
+}
+
+.footer__copyright p {
+    margin: 0px;
 }
 
 @media screen and (max-width:1040px) {
@@ -260,7 +296,6 @@ body {
         display: block;
     }
 
-
 }
 
 @media screen and (max-width:520px) {
@@ -275,7 +310,7 @@ body {
         margin-top: 140px;
     }
 
-    .btn {
+    .btn__general {
         padding: 10px;
     }
 
