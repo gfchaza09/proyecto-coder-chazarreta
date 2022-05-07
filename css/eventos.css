@@ -60,7 +60,7 @@
     margin-bottom: 50px;
 }
 
-.article__content--text button {
+.btn__read {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     border: none;
@@ -71,14 +71,13 @@
     box-shadow: 8px 8px 10px 2px rgba(0,0,0,0.85);
 }
 
-.article__content--text button:hover {
+.btn__read:hover {
     text-decoration: underline;
     outline: 2px solid #dfdfdf;
 }
 
-.article__content--text button a {
-    color: #dfdfdf;
-    text-decoration: none;
+.article__content--text div p {
+    margin-top: 1.5rem;
 }
 
 @media screen and (max-width:860px) {

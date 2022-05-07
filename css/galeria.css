@@ -55,8 +55,13 @@ ul {
     min-height: 500px;
 }
 
+.gallery__photo {
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
 .gallery__container {
-    max-height: 800px;
+    max-height: 600px;
 }
 
 .mobile__title {
@@ -71,183 +76,22 @@ ul {
     display: block;
 }
 
-.gallery__photo {
-    width: 80%;
-    margin: 0px auto;
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-/* Animaciones escritorio */
-
-@keyframes agrandar-1 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2.1) translateX(78px) translateY(76px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes agrandar-2 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2.1) translateX(-78px) translateY(76px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes agrandar-3 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2.1) translateX(78px) translateY(-76px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes agrandar-4 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2.1) translateX(-78px) translateY(-76px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Animaciones mobile y tablets */
-
-@keyframes agrandar980-1 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2) translateY(76px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes agrandar980-2 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes agrandar980-3 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes agrandar980-4 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2)  translateY(-76px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Animaciones mobile */
-
-@keyframes agrandar480-1 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2.1) translateX(50px) translateY(52px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes agrandar480-2 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2.1) translateX(-50px) translateY(52px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes agrandar480-3 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2.1) translateX(50px) translateY(-48px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes agrandar480-4 {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(2.1) translateX(-50px) translateY(-48px);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+.card-img {
+    width: 100%;
+    height: 600px !important;
+    object-fit: cover;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
 }
 
 @media screen and (max-width:980px) {
@@ -299,6 +143,8 @@ ul {
 
     .mobile__title {
         display: block;
+        font-weight: 700;
+        line-height: 1;
         width: 100%;
         padding: 20px;
         margin: 0px auto;
@@ -313,12 +159,12 @@ ul {
         flex-direction: column;
     }
 
-    .gallery__btn {
-        display: none;
-    }
-
     #establecimiento, #pizza-varios, #nuestra-gente, #personas-personajes {
         display: block;
+    }
+
+    .gallery__container {
+        min-height: 500px;
     }
 
     #personas-personajes {

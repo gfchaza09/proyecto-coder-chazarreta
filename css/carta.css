@@ -117,7 +117,7 @@
     }
 
     .section__card {
-        width: 20rem;
+        width: 100%;
     }
 
 }
