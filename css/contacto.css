@@ -134,6 +134,10 @@
         background-color: rgb(255, 217, 128, 0.5);
     }
 
+    #liveAlertPlaceholder {
+        height: 70px;
+    }
+
 }
 
 @media screen and (max-width:480px) {
@@ -148,6 +152,10 @@
 
     .img {
         display: none;
+    }
+
+    #liveAlertPlaceholder {
+        height: 90px;
     }
 }
 
