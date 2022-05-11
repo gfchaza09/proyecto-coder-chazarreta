@@ -1,3 +1,8 @@
+.main {
+    animation-name: show;
+    animation-duration: 2s;
+}
+
 .main__title {
     font-size: 3rem;
     font-weight: 700;
@@ -74,6 +79,8 @@
 .section__card {
     background-color: #FFD980 !important;
     width: 18rem;
+    animation-name: flipInX;
+    animation-duration: .8s;
 }
 
 .card__text {

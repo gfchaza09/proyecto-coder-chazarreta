@@ -7,6 +7,8 @@
     justify-items: stretch;
     align-items: stretch;
     background-color: #FFD980;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
 }
 
 .container__contact {
@@ -66,6 +68,8 @@
 
 .form__input:focus-visible {
     outline: none;
+    color:#dfdfdf;
+    background-color: rgb(32, 32, 32);
 }
 
 .form__contact div label:last-child {
@@ -107,6 +111,17 @@
     height: 70px;
 }
 
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @media screen and (max-width:960px) {
     .main__section--contact, .img {
         height: 95vh;
@@ -123,6 +138,8 @@
         height: 90vh;
         background-image: url("https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxjb250YWN0fGVufDB8fHx8MTY1MDIyMjEyOA&ixlib=rb-1.2.1&q=80&w=1080");
         background-size: cover;
+        animation-name: show;
+        animation-duration: 1s;
     }
 
     .container__contact h2, .container__contact p {

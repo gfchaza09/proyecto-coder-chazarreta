@@ -1,5 +1,7 @@
 .main {
     margin-bottom: 50px;
+    animation-name: show;
+    animation-duration: 1s;
 }
 
 .main__title {
@@ -11,7 +13,11 @@
 
 .main__subtitle {
     font-size: 1.5rem;
+    width: 50%;
+    margin: 0px auto;
     text-align: center;
+    animation-name: shake;
+    animation-duration: 1s;
 }
 
 .main__section--gallery {
@@ -20,6 +26,8 @@
     margin: 20px auto;
     border-radius: 5px;
     padding: 10px;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
 }
 
 ul {
@@ -74,6 +82,8 @@ ul {
 
 #establecimiento:target, #pizza-varios:target, #nuestra-gente:target, #personas-personajes:target {
     display: block;
+    animation-name: slideInBottom;
+    animation-duration: 1s;
 }
 
 .carousel-item {
@@ -130,6 +140,7 @@ ul {
 
     .main__subtitle {
         font-size: 1.25rem;
+        animation: none;
     }
 
     .list {
