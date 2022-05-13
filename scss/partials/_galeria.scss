@@ -1,0 +1,185 @@
+.main__title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 160px;
+}
+
+.main__subtitle {
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+    animation-name: $shake;
+    animation-duration: 1s;
+}
+
+.main__section--gallery {
+    background-color: $bg-color-light;
+    width: 80%;
+    margin: 20px auto 50px;
+    border-radius: 5px;
+    padding: 10px;
+    animation-name: $slide-in-left;
+    animation-duration: 1s;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &__item {
+        padding: 20px;
+        background-color: $dark;
+        border-right: 1px solid $light;
+        border-left: 1px solid $light;
+        border-radius: 3px;
+
+        a {
+            text-decoration: none;
+            color: $light;
+            cursor: pointer;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.gallery {
+    min-height: 500px;
+
+    &__photo {
+        max-width: 1440px;
+        margin: 0px auto;
+    }
+
+    &__container {
+        max-height: 600px;
+    }
+}
+
+.mobile__title {
+    display: none;
+}
+
+#establecimiento, #pizza-varios, #nuestra-gente, #personas-personajes {
+    display: none;
+}
+
+#establecimiento:target, #pizza-varios:target, #nuestra-gente:target, #personas-personajes:target {
+    display: block;
+    animation-name: $slide-in-bottom;
+    animation-duration: 1s;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.card-img {
+    width: 100%;
+    height: 600px !important;
+    object-fit: cover;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+@media screen and (max-width:980px) {
+
+    .list {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:810px) {
+    .main__title {
+        margin-top: 240px;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .main__title {
+        margin-top: 220px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .main__section--gallery {
+        width: 90%;
+    }
+    .list__item {
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .main__title {
+        font-size: 2.25rem;
+        margin-top: 190px;
+    }
+
+    .main__subtitle {
+        font-size: 1.25rem;
+        animation: none;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .main__section--gallery {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .mobile__title {
+        display: block;
+        font-weight: 700;
+        line-height: 1;
+        width: 100%;
+        padding: 20px;
+        margin: 0px auto;
+        background-color: $dark;
+        color: $light;
+        border-radius: 3px;
+        text-align: center;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+
+        &__container {
+            min-height: 500px;
+        }
+    }
+
+    #establecimiento, #pizza-varios, #nuestra-gente, #personas-personajes {
+        display: block;
+    }
+
+    #personas-personajes {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .main__title {
+        margin-top: 160px;
+    }
+}

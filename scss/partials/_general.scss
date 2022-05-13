@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $Poppins !important; 
+    background-color: $bg-color-primary !important;
+}
+
+ul {
+    padding-left: 0px !important;
+}
+
+.main {
+    margin-top: 130px;
+    animation-name: $show;
+    animation-duration: 1.5s;
+}
+
+.btn__general {
+    width: 160px;
+    font-family: $Poppins;
+    font-size: 1rem;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 8px 8px 10px 2px rgba(0,0,0,0.85);
+}
+
+/* Estilos del Header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $bg-header;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.9);
+    z-index: 100;
+
+    /* Estilos de la barra de navegacion - Inicio */
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &--logo {
+            width: 100px;
+            height: 100px;
+            margin: 1rem;
+            border-radius: 50%;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            margin: 0px 15px;
+        }
+
+        li {
+            margin: 0px 24px;
+
+            a {
+                text-decoration: none;
+                color: $light;
+                transition: text-shadow .4s;
+
+                &:hover {
+                    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+                }
+            }
+        }
+    }
+
+    &__btn--close {
+        display: none;
+    }
+}
+
+.btn__menu {
+    display: none;
+
+    a:hover {
+        color: $light;
+    }
+}
+
+/* Estilos de la barra de navegacion - Final */
+
+/* Estilos del Footer */
+
+.footer {
+    background-color: $bg-color-dark;
+    box-shadow: 2px -5px 6px 0px rgba(0, 0, 0, 0.749);
+    color: $light;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 300px;
+        justify-content: center;
+        text-align: center;
+
+        &--logo {
+            width: 150px;
+            height: 150px;
+            margin: 0.9rem;
+            border-radius: 50%;
+        }
+
+        &--container {
+            margin: 1rem 1.5rem;
+
+            h4 {
+                font-size: 20px;
+                letter-spacing: 1.5px;
+                font-weight: 700;
+                line-height: 1;
+                margin-bottom: 0px;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 15px 0px;
+            }
+
+            iframe {
+                width: 250px;
+                height: 250px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $light;
+
+                i {
+                    font-size: 3rem;
+                    margin: 30px 5px 30px;
+                    transition: color .5s;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        background-color: $dark;
+        color: $light;
+        text-align: center;
+        font-size: 14px;
+        padding: 18px;
+
+        p {
+            margin: 0px;
+        }
+    }
+}
+
+.location {
+    display: flex;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0rem 1.8rem;
+    }
+}
+
+.btn-news {
+    padding: 1rem 1.5rem !important;
+    border-radius: 10px !important;
+    box-shadow: 8px 8px 10px 2px rgba(0, 0, 0, 0.85);
+    transition: all .8s linear;
+
+    &:hover {
+        background-color: $dark !important;
+        color: $light !important;
+    }
+}
+
+.form-control:focus {
+    border-color: #ced4da !important;
+    box-shadow: none !important;
+}
+
+.btn-warning:hover {
+    outline: 2px solid $dark;
+}
+
+.fa-facebook-square:hover {
+    color: $facebook;
+}
+
+.fa-instagram-square:hover {
+    background: $instagram;
+    -webkit-background-clip: text;
+    color: transparent;  
+}
+
+.fa-twitter-square:hover {
+    color:  $twitter;
+}
+
+@media screen and (max-width:1040px) {
+    .footer__nav {
+        flex-direction: column;
+
+        &--container a i {
+            margin: 28px;
+        }
+    }
+}
+
+@media screen and (max-width:810px) {
+    .main {
+        margin-top: 195px;
+    }
+
+    .header__nav {
+        flex-direction: column;
+
+        ul {
+            padding: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:720px) {
+    .main {
+        margin-top: 170px;
+    }
+
+    .header__nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+
+        ul {
+            display: none;
+        }
+    }
+
+    .btn__menu {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+
+        a {
+            color: $light;
+        }
+    }
+
+    #lateral {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 110;
+        transition: right .5s;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 0;
+
+        &:target {
+            right: 0;
+        }
+
+        li {
+            margin: 20px 0px;
+            transition: padding 0.5s;
+
+            &:hover {
+                border-radius: 5px;
+                background-color: rgba(192, 192, 192, 0.5);
+                padding: 20px;
+            }
+        }
+    }
+
+    .header__btn--close {
+        display: block;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .location {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .main {
+        margin-top: 140px;
+    }
+
+    .btn__general {
+        padding: 10px;
+    }
+
+    .header {
+        height: 140px;
+
+        &__nav--logo {
+            margin: 0;
+        }
+    }
+
+    .footer__nav--container iframe {
+        width: 300px;
+        height: 300px;
+    }
+
+    .footer__copyright {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:360px) {
+
+    .main {
+        margin-top: 125px;
+    }
+
+    .header {
+        height: 125px;
+
+        &__nav--logo {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .btn__menu {
+        font-size: 1.8rem;
+    }
+
+    .footer__nav--container a i {
+        margin: 20px;
+    }
+}

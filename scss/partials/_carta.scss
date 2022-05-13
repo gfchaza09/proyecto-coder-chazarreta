@@ -1,0 +1,130 @@
+.main__title--food {
+    font-size: 3rem;
+    font-weight: 700;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+       ), $bg-img-carta-title;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px;
+    padding: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: $light;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+}
+
+.separador {
+    background-color: $dark;
+    height: 50px;
+}
+
+.section__food {
+    font-size: 2rem;
+    padding: 50px;
+    text-align: center;
+    color: $light;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+}
+
+.pizzas, .empanadas, .bebidas, .postres {
+    font-weight: 700;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+}
+
+.pizzas {
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+       ), $bg-img-carta-pizzas;
+}
+
+.empanadas {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+       ), $bg-img-carta-empanadas;
+}
+
+.bebidas {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+       ), $bg-img-carta-bebidas;
+}
+
+.postres {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+       ), $bg-img-carta-postres;
+}
+
+.section__card {
+    background-color: $bg-color-light !important;
+    width: 18rem;
+    animation-name: $flip-in-x;
+    animation-duration: .8s;
+}
+
+.card__text--food {
+    padding: 10px 20px 20px;
+}
+
+.card__text--food h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width:767px) {
+    .section__card {
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width:660px) {
+
+    .section__card {
+        width: 22rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .separador__sup {
+        display: none;
+    }
+
+    .main__title--food {
+        font-size: 2rem;
+    }
+
+    .separador {
+        height: 30px;
+    }
+
+    .section__food {
+        font-size: 1.5rem;
+    }
+
+    .section__card {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .section__card {
+        width: 18rem;
+    }
+}
