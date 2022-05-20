@@ -79,7 +79,7 @@ ul {
   animation-duration: 1.5s;
 }
 
-.btn__general {
+.btn__general, .btn__read, .form__contact button {
   width: 160px;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
@@ -159,10 +159,11 @@ ul {
 
 .footer__nav {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   min-height: 300px;
-  justify-content: center;
   text-align: center;
 }
 
@@ -225,8 +226,8 @@ ul {
 .location div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: 0rem 1.8rem;
 }
 
@@ -348,7 +349,7 @@ ul {
   .main {
     margin-top: 140px;
   }
-  .btn__general {
+  .btn__general, .btn__read, .form__contact button {
     padding: 10px;
   }
   .header {
@@ -401,8 +402,8 @@ ul {
 
 .main__section--title {
   font-size: 5rem;
-  font-weight: 700;
   letter-spacing: 10px;
+  font-weight: 700;
   line-height: 1;
   margin-bottom: 0px;
 }
@@ -577,12 +578,14 @@ ul {
 .main__title--food {
   font-size: 3rem;
   font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0px;
+  line-height: 1.2;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxwaXp6YXxlbnwwfHx8fDE2NTAyMjk1Nzg&ixlib=rb-1.2.1&q=80&w=1080");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px;
   padding: 50px;
-  margin-bottom: 0px;
   text-align: center;
   letter-spacing: 2px;
   color: #dfdfdf;
@@ -604,11 +607,12 @@ ul {
 
 .pizzas, .empanadas, .bebidas, .postres {
   font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px;
   letter-spacing: 2px;
-  margin-bottom: 0px;
 }
 
 .pizzas {
@@ -826,6 +830,7 @@ ul {
     display: block;
     font-weight: 700;
     line-height: 1;
+    margin-bottom: 0px;
     width: 100%;
     padding: 20px;
     margin: 0px auto;
@@ -858,6 +863,9 @@ ul {
 .section__events--title {
   font-size: 3rem;
   font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0px;
+  line-height: 1.2;
   letter-spacing: 2px;
   width: 100%;
   height: 300px;
@@ -865,7 +873,6 @@ ul {
   text-align: center;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   padding: 100px 30px;
-  margin-bottom: 0px;
   background-image: url("https://images.unsplash.com/photo-1517457373958-b7bdd4587205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxldmVudHxlbnwwfHx8fDE2NTAyMjUwMDE&ixlib=rb-1.2.1&q=80&w=1080");
   background-repeat: no-repeat;
   background-size: cover;
@@ -891,8 +898,8 @@ ul {
 .article__header h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0px;
   line-height: 1;
+  margin-bottom: 0px;
 }
 
 .article__content {
@@ -923,13 +930,9 @@ ul {
 }
 
 .btn__read {
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  border: none;
+  width: 100%;
   border-radius: 5px;
   background-color: #0e0e0e;
-  padding: 15px 20px;
-  cursor: pointer;
   box-shadow: 8px 8px 10px 2px rgba(0, 0, 0, 0.85);
 }
 
@@ -972,6 +975,7 @@ ul {
     width: 100%;
   }
   .article__content--text {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -1051,13 +1055,10 @@ ul {
   width: 100%;
   background-color: #0e0e0e;
   color: #dfdfdf;
-  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 2px;
   margin: 15px 0px 20px;
   padding: 10px 20px;
-  cursor: pointer;
-  border: none;
   text-transform: uppercase;
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.8);
   border-radius: 5px;
@@ -1126,8 +1127,8 @@ ul {
     display: block;
     height: 90vh;
     background-image: url("https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxjb250YWN0fGVufDB8fHx8MTY1MDIyMjEyOA&ixlib=rb-1.2.1&q=80&w=1080");
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     animation-name: show;
     animation-duration: 1s;
   }

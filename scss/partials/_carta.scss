@@ -1,16 +1,16 @@
 .main__title--food {
     font-size: 3rem;
-    font-weight: 700;
+    @include title;
+    line-height: 1.2;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
-       ), $bg-img-carta-title;
+       ), map-get($bg-img-carta, title);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
     padding: 50px;
-    margin-bottom: 0px;
     text-align: center;
     letter-spacing: 2px;
     color: $light;
@@ -31,12 +31,11 @@
 }
 
 .pizzas, .empanadas, .bebidas, .postres {
-    font-weight: 700;
+    @include title;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
     letter-spacing: 2px;
-    margin-bottom: 0px;
 }
 
 .pizzas {
@@ -44,7 +43,7 @@
         to left,
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.3)
-       ), $bg-img-carta-pizzas;
+       ), map-get($bg-img-carta, pizzas);
 }
 
 .empanadas {
@@ -52,7 +51,7 @@
         to right,
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.3)
-       ), $bg-img-carta-empanadas;
+       ), map-get($bg-img-carta, empanadas);
 }
 
 .bebidas {
@@ -60,7 +59,7 @@
         to right,
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.3)
-       ), $bg-img-carta-bebidas;
+       ), map-get($bg-img-carta, bebidas);
 }
 
 .postres {
@@ -68,7 +67,7 @@
         to right,
         rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.3)
-       ), $bg-img-carta-postres;
+       ), map-get($bg-img-carta, postres);
 }
 
 .section__card {

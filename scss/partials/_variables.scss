@@ -13,18 +13,25 @@ $bg-header: linear-gradient(0deg, rgba(102,78,20,0.8) 0%, rgba(204,167,82,0.8) 1
 $border-color: #664e14;
 $light: #dfdfdf;
 $dark: #0e0e0e;
-$facebook: #3b5998;
-$twitter: #00acee;
-$instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+
+//Mapa de colores de redes sociales
+
+$redes: (
+    facebook: #3b5998,
+    twitter: #00acee,
+    instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)
+);
 
 //Imagenes de fondo
 
 $bg-img-index: url("https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwcGl6emF8ZW58MHx8fHwxNjQ5ODIzMzI0&ixlib=rb-1.2.1&q=80&w=1080");
-$bg-img-carta-title: url("https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxwaXp6YXxlbnwwfHx8fDE2NTAyMjk1Nzg&ixlib=rb-1.2.1&q=80&w=1080");
-$bg-img-carta-pizzas:url("https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw5fHxwaXp6YXxlbnwwfHx8fDE2NTAyMjk1Nzg&ixlib=rb-1.2.1&q=80&w=1080");
-$bg-img-carta-empanadas: url("https://images.unsplash.com/photo-1609525313344-a56b96f20718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHwxfHxlbXBhbmFkYXN8ZW58MHx8fHwxNjUwMjMxOTc1&ixlib=rb-1.2.1&q=80&w=1080");
-$bg-img-carta-bebidas: url("https://images.unsplash.com/photo-1551024709-8f23befc6f87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHwxMXx8ZHJpbmt8ZW58MHx8fHwxNjUwMjMyMTAw&ixlib=rb-1.2.1&q=80&w=1080");
-$bg-img-carta-postres: url("https://images.unsplash.com/photo-1589660117682-0728d988a2d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHwxfHx0b3J0YXxlbnwwfHx8fDE2NTAyMzIzNDQ&ixlib=rb-1.2.1&q=80&w=1080");
+$bg-img-carta: (
+    title: url("https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxwaXp6YXxlbnwwfHx8fDE2NTAyMjk1Nzg&ixlib=rb-1.2.1&q=80&w=1080"),
+    pizzas: url("https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw5fHxwaXp6YXxlbnwwfHx8fDE2NTAyMjk1Nzg&ixlib=rb-1.2.1&q=80&w=1080"),
+    empanadas: url("https://images.unsplash.com/photo-1609525313344-a56b96f20718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHwxfHxlbXBhbmFkYXN8ZW58MHx8fHwxNjUwMjMxOTc1&ixlib=rb-1.2.1&q=80&w=1080"),
+    bebidas: url("https://images.unsplash.com/photo-1551024709-8f23befc6f87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHwxMXx8ZHJpbmt8ZW58MHx8fHwxNjUwMjMyMTAw&ixlib=rb-1.2.1&q=80&w=1080"),
+    postres: url("https://images.unsplash.com/photo-1589660117682-0728d988a2d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHwxfHx0b3J0YXxlbnwwfHx8fDE2NTAyMzIzNDQ&ixlib=rb-1.2.1&q=80&w=1080")
+);
 $bg-img-eventos-title: url("https://images.unsplash.com/photo-1517457373958-b7bdd4587205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxldmVudHxlbnwwfHx8fDE2NTAyMjUwMDE&ixlib=rb-1.2.1&q=80&w=1080");
 $bg-img-contacto-section: url("https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxjb250YWN0fGVufDB8fHx8MTY1MDIyMjEyOA&ixlib=rb-1.2.1&q=80&w=1080");
 

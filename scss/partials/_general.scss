@@ -101,11 +101,9 @@ ul {
     color: $light;
 
     &__nav {
-        display: flex;
-        align-items: center;
+        @include flex-row-center;
         flex-wrap: wrap;
         min-height: 300px;
-        justify-content: center;
         text-align: center;
 
         &--logo {
@@ -121,9 +119,7 @@ ul {
             h4 {
                 font-size: 20px;
                 letter-spacing: 1.5px;
-                font-weight: 700;
-                line-height: 1;
-                margin-bottom: 0px;
+                @include title;
             }
 
             p {
@@ -166,10 +162,7 @@ ul {
     display: flex;
 
     div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flex-column-center;
         margin: 0rem 1.8rem;
     }
 }
@@ -196,17 +189,17 @@ ul {
 }
 
 .fa-facebook-square:hover {
-    color: $facebook;
+    color: map-get($redes, facebook);
 }
 
 .fa-instagram-square:hover {
-    background: $instagram;
+    background: map-get($redes, instagram);
     -webkit-background-clip: text;
     color: transparent;  
 }
 
 .fa-twitter-square:hover {
-    color:  $twitter;
+    color: map-get($redes, twitter);
 }
 
 @media screen and (max-width:1040px) {
@@ -259,10 +252,7 @@ ul {
     }
 
     #lateral {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-column-center;
         width: 80%;
         height: 100vh;
         position: fixed;

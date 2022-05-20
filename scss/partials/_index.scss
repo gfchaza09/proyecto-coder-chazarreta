@@ -18,10 +18,8 @@
 
 .main__section--title {
     font-size: 5rem;
-    font-weight: 700;
     letter-spacing: 10px;
-    line-height: 1;
-    margin-bottom: 0px;
+    @include title;
 }
 
 .main__section--subtitle {

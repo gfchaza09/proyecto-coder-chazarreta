@@ -27,9 +27,7 @@
 }
 
 .img {
-    background-image: $bg-img-contacto-section;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include background($bg-img-contacto-section);
     height: 90vh;
 }
 
@@ -55,16 +53,14 @@
     }
 
     button {
+        @extend .btn__general;
         width: 100%;
         background-color: $dark;
         color: $light;
-        font-family: $Poppins;
         font-size: 1.2rem;
         letter-spacing: 2px;
         margin: 15px 0px 20px;
         padding: 10px 20px;
-        cursor: pointer;
-        border: none;
         text-transform: uppercase;
         box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.8);
         border-radius: 5px;
@@ -135,9 +131,7 @@
     .main__section--contact {
         display: block;
         height: 90vh;
-        background-image: url("https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzM2NDd8MHwxfHNlYXJjaHw2fHxjb250YWN0fGVufDB8fHx8MTY1MDIyMjEyOA&ixlib=rb-1.2.1&q=80&w=1080");
-        background-size: cover;
-        background-repeat: no-repeat;
+        @include background($bg-img-contacto-section);
         animation-name: $show;
         animation-duration: 1s;
     }
