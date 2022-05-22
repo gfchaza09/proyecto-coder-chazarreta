@@ -111,6 +111,16 @@ ul {
     }
 }
 
+@media screen and (max-width:810px) and (orientation: landscape) {
+    .main__title {
+        margin-top: 160px;
+    }
+
+    .carousel-item {
+        height: auto;
+    }
+}
+
 @media screen and (max-width:720px) {
     .main__title {
         margin-top: 220px;

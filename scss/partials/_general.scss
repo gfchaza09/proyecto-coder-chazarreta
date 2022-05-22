@@ -226,6 +226,32 @@ ul {
     }
 }
 
+@media screen and (orientation: landscape) {
+
+    .main {
+        margin-top: 105px;
+    }
+
+    .header__nav {
+        flex-direction: row;
+
+        &--logo{
+            width: 75px;
+            height: 75px;
+        }
+
+        ul {
+            margin: 0px;
+            flex-wrap: nowrap;
+        }
+
+        li {
+            font-size: 14px;
+            margin: 0px 16px;
+        }
+    }
+}
+
 @media screen and (max-width:720px) {
     .main {
         margin-top: 170px;
