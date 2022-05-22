@@ -226,7 +226,7 @@ ul {
     }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (max-width:810px) and (orientation: landscape) {
 
     .main {
         margin-top: 105px;

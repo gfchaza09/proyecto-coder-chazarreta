@@ -287,7 +287,7 @@ ul {
   }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 810px) and (orientation: landscape) {
   .main {
     margin-top: 105px;
   }
@@ -517,15 +517,15 @@ ul {
 }
 
 /* Estilos de la sección de tarjetas - Final*/
-@media screen and (orientation: landscape) {
-  .main__section--welcome {
-    height: auto;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .main__section--cards {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 810px) and (orientation: landscape) {
+  .main__section--welcome {
+    height: auto;
   }
 }
 
