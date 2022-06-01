@@ -360,6 +360,18 @@ ul {
   }
 }
 
+@media screen and (max-width: 720px) and (orientation: landscape) {
+  .main {
+    margin-top: 145px;
+  }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+  #lateral {
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 520px) {
   .location {
     flex-direction: column;
@@ -404,6 +416,10 @@ ul {
   }
   .footer__nav--container a i {
     margin: 20px;
+  }
+  .footer iframe {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -523,7 +539,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 810px) and (orientation: landscape) {
+@media screen and (max-width: 915px) and (orientation: landscape) {
   .main__section--welcome {
     height: auto;
   }
@@ -593,9 +609,18 @@ ul {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .main__section--welcome {
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 360px) {
+  .main__section--welcome {
+    padding: 70px;
+  }
   .main__section--title {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
   .card__title {
     font-size: 2rem;
@@ -710,6 +735,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .section__card {
+    width: 16rem;
+  }
+}
+
 .main__title {
   font-size: 3rem;
   font-weight: 700;
@@ -810,6 +841,12 @@ ul {
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .carousel-item {
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 980px) {
   .list {
     font-size: 0.8rem;
@@ -825,9 +862,6 @@ ul {
 @media screen and (max-width: 810px) and (orientation: landscape) {
   .main__title {
     margin-top: 160px;
-  }
-  .carousel-item {
-    height: auto;
   }
 }
 
@@ -1213,12 +1247,15 @@ ul {
   }
 }
 
+@media screen and (max-width: 540px) {
+  .main__section--contact {
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .form__input, .form__label {
     font-size: 0.9rem;
-  }
-  .main__section--contact {
-    height: auto;
   }
   .img {
     display: none;

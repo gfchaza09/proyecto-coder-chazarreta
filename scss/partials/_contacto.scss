@@ -190,14 +190,16 @@
     }
 }
 
+@media screen and (max-width:540px) {
+    .main__section--contact {
+        height: auto;
+    }
+}
+
 @media screen and (max-width:480px) {
 
     .form__input, .form__label {
         font-size: 0.9rem;
-    }
-
-    .main__section--contact {
-        height: auto;
     }
 
     .img {

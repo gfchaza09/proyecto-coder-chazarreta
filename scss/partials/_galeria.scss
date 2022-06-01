@@ -98,6 +98,12 @@ ul {
     border-top-right-radius: calc(0.25rem - 1px);
 }
 
+@media screen and (max-width:1024px) and (orientation: landscape) {
+    .carousel-item {
+        height: auto;
+    }
+}
+
 @media screen and (max-width:980px) {
 
     .list {
@@ -114,10 +120,6 @@ ul {
 @media screen and (max-width:810px) and (orientation: landscape) {
     .main__title {
         margin-top: 160px;
-    }
-
-    .carousel-item {
-        height: auto;
     }
 }
 

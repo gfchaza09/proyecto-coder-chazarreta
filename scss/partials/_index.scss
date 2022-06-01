@@ -119,7 +119,7 @@
     }
 }
 
-@media screen and (max-width: 810px) and (orientation: landscape) {
+@media screen and (max-width: 915px) and (orientation: landscape) {
     .main__section--welcome {
         height: auto;
     }
@@ -152,6 +152,7 @@
 }
 
 @media screen and (max-width:720px) {
+
     .main__section--title {
         font-size: 4rem;
     }
@@ -202,9 +203,20 @@
     }
 }
 
+@media screen and (max-width:375px) {
+    .main__section--welcome {
+        height: auto;
+    }
+}
+
 @media screen and (max-width:360px) {
+
+    .main__section--welcome {
+        padding: 70px;
+    }
+
     .main__section--title {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
     }
 
     .card__title {

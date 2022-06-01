@@ -127,3 +127,9 @@
         width: 18rem;
     }
 }
+
+@media screen and (max-width:320px) {
+    .section__card {
+        width: 16rem;
+    }
+}
