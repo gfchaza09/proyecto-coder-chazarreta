@@ -129,7 +129,7 @@
 
 @media screen and (max-width:960px) {
     .main__section--contact, .img {
-        height: 95vh;
+        height: auto;
     }
 
     #liveAlertPlaceholder {
@@ -140,7 +140,6 @@
 @media screen and (max-width:720px) {
     .main__section--contact {
         display: block;
-        height: auto;
         @include background($bg-img-contacto-section);
         animation-name: $show;
         animation-duration: 1s;
@@ -167,12 +166,6 @@
         height: 70px;
     }
 
-}
-
-@media screen and (max-width:540px) {
-    .main__section--contact {
-        height: auto;
-    }
 }
 
 @media screen and (max-width:480px) {
