@@ -17,7 +17,7 @@ const ingresarSorteo = () => {
         if (numeroSorteo > 0 && numeroSorteo <=200 && !arrayNumerosElegidos.includes(numeroSorteo)) {
             alert(`Muchas gracias por participar ${nombre} ${apellido}. Su número es ${numeroSorteo}, en caso de ganar debe presentar el DNI ingresado: ${dni}`);
             arraySorteo.push({nombre, apellido, dni, numeroSorteo});
-            arrayNumerosElegidos.push(numeroSorteo);
+            arrayNumerosElegidos = arraySorteo.map(numero => numero.numeroSorteo);
             respuestaBucle = "no";
         } else {
             if(numeroSorteo <= 0 || numeroSorteo >200) {
