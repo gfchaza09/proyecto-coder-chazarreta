@@ -784,16 +784,24 @@ ul {
   border-right: 1px solid #dfdfdf;
   border-left: 1px solid #dfdfdf;
   border-radius: 3px;
+  color: #dfdfdf;
+  transition: color .4s linear, background-color .5s linear;
 }
 
-.list__item a {
-  text-decoration: none;
-  color: #dfdfdf;
-  cursor: pointer;
+.list__item button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  user-select: none;
 }
 
 .list__item:hover {
   text-decoration: underline;
+}
+
+.list__item--active {
+  background-color: #dfdfdf;
+  color: #0e0e0e;
 }
 
 .gallery {
@@ -813,11 +821,11 @@ ul {
   display: none;
 }
 
-#establecimiento, #pizza-varios, #nuestra-gente, #personas-personajes {
+.gallery__photo {
   display: none;
 }
 
-#establecimiento:target, #pizza-varios:target, #nuestra-gente:target, #personas-personajes:target {
+.gallery-active {
   display: block;
   animation-name: slideInBottom;
   animation-duration: 1s;
@@ -916,10 +924,10 @@ ul {
   .gallery__container {
     min-height: 500px;
   }
-  #establecimiento, #pizza-varios, #nuestra-gente, #personas-personajes {
+  #establecimiento, #pizzaVarios, #nuestraGente, #personas {
     display: block;
   }
-  #personas-personajes {
+  #personas {
     margin-bottom: 60px;
   }
 }

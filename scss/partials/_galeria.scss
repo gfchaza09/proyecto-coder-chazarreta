@@ -40,17 +40,25 @@ ul {
         border-right: 1px solid $light;
         border-left: 1px solid $light;
         border-radius: 3px;
+        color: $light;
+        transition: color .4s linear, background-color .5s linear;
 
-        a {
-            text-decoration: none;
-            color: $light;
-            cursor: pointer;
+        button {
+            background-color: inherit;
+            color: inherit;
+            border: none;
+            user-select: none;
         }
 
         &:hover {
             text-decoration: underline;
         }
     }
+}
+
+.list__item--active {
+    background-color: $light;
+    color: $dark;
 }
 
 .gallery {
@@ -70,11 +78,11 @@ ul {
     display: none;
 }
 
-#establecimiento, #pizza-varios, #nuestra-gente, #personas-personajes {
+.gallery__photo {
     display: none;
 }
 
-#establecimiento:target, #pizza-varios:target, #nuestra-gente:target, #personas-personajes:target {
+.gallery-active {
     display: block;
     animation-name: $slide-in-bottom;
     animation-duration: 1s;
@@ -180,11 +188,11 @@ ul {
         }
     }
 
-    #establecimiento, #pizza-varios, #nuestra-gente, #personas-personajes {
+    #establecimiento, #pizzaVarios, #nuestraGente, #personas {
         display: block;
     }
 
-    #personas-personajes {
+    #personas {
         margin-bottom: 60px;
     }
 }
