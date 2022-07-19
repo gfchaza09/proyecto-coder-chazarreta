@@ -1094,6 +1094,7 @@ ul {
   font-weight: 700;
   text-align: center;
   line-height: 1;
+  margin-top: 1rem;
 }
 
 .container__contact p {
@@ -1177,9 +1178,13 @@ ul {
   background-color: #202020;
 }
 
-#liveAlertPlaceholder {
-  overflow: hidden;
-  height: 70px;
+.input__error {
+  border: 2px solid #7c1b1b;
+}
+
+.message__error {
+  color: #7c1b1b;
+  font-size: .75rem;
 }
 
 @media screen and (max-width: 1420px) {
@@ -1203,9 +1208,6 @@ ul {
 @media screen and (max-width: 960px) {
   .main__section--contact, .img {
     height: auto;
-  }
-  #liveAlertPlaceholder {
-    height: 90px;
   }
 }
 
@@ -1231,9 +1233,6 @@ ul {
   .img {
     display: none;
   }
-  #liveAlertPlaceholder {
-    height: 70px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1242,9 +1241,6 @@ ul {
   }
   .img {
     display: none;
-  }
-  #liveAlertPlaceholder {
-    height: 90px;
   }
 }
 

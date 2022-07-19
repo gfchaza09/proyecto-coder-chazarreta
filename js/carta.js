@@ -8,7 +8,7 @@ const generateCards = (arrObjetos, container) => {
                     <img src=${objeto.img} alt="${objeto.id}-carta" class="card-img-top" />
                     <div class="card-body card__text--food">
                         <h4>${objeto.titulo}</h4>
-                        <p>${objeto.parrafo ? objeto.parrafo : ""}</p>
+                        ${objeto.parrafo ? `<p>${objeto.parrafo}</p>` : ""}
                         <span>Precio: ${objeto.precio}$</span>
                     </div>
                 </div>

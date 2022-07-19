@@ -19,6 +19,7 @@
         font-weight: 700;
         text-align: center;
         line-height: 1;
+        margin-top: 1rem;
     }
 
     p {
@@ -102,9 +103,13 @@
     }
 }
 
-#liveAlertPlaceholder {
-    overflow: hidden;
-    height: 70px;
+.input__error {
+    border: 2px solid rgb(124, 27, 27);
+}
+
+.message__error {
+    color: rgb(124, 27, 27);
+    font-size: .75rem;
 }
 
 @media screen and (max-width:1420px) {
@@ -130,10 +135,6 @@
 @media screen and (max-width:960px) {
     .main__section--contact, .img {
         height: auto;
-    }
-
-    #liveAlertPlaceholder {
-        height: 90px;
     }
 }
 
@@ -161,11 +162,6 @@
     .img {
         display: none;
     }
-
-    #liveAlertPlaceholder {
-        height: 70px;
-    }
-
 }
 
 @media screen and (max-width:480px) {
@@ -176,10 +172,6 @@
 
     .img {
         display: none;
-    }
-
-    #liveAlertPlaceholder {
-        height: 90px;
     }
 }
 
