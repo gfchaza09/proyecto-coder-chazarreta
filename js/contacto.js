@@ -48,7 +48,7 @@ const showError = (validate, input) => {
 
 // Expresiones regulares
 
-// Luego del . se deben usar más de un caracter
+// Luego del . se debe usar más de un caracter
 // Un email no puede iniciar con .
 // Se admiten caracteres, dígitos, guiones bajos y guiones
 // No se admiten puntos dobles ..
@@ -61,7 +61,7 @@ const regExpTelefono = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})
 const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
 const closeAlertBtn = document.getElementById("closeAlert");
 
-function alert(message, type) {
+function alertBootstrap(message, type) {
   let wrapper = document.createElement("div");
   wrapper.innerHTML =
     '<div class="alert alert-' +
@@ -84,8 +84,6 @@ const checkboxSub = document.getElementById("suscribe");
 
 const form = document.getElementById("formulario");
 
-console.log(inputNombre.parentElement.lastElementChild.className);
-
 // Objeto que contiene los valores del formulario
 const objFormulario = {
   nombre: "",
@@ -104,10 +102,10 @@ form.addEventListener("submit", e => {
     objFormulario.mensaje = inputMensaje.value;
     objFormulario.suscripcion = checkboxSub.checked;
     console.log(objFormulario);
-    alert("¡Muchas gracias por enviarnos tu mensaje!", "success");
+    alertBootstrap("¡Muchas gracias por enviarnos tu mensaje!", "success");
   }
   showError(validateInput(inputNombre), inputNombre);
   showError(validateInput(inputEmail), inputEmail);
   showError(validateInput(inputTelefono), inputTelefono);
   showError(validateInput(inputMensaje), inputMensaje);
-})
+});
