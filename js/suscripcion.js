@@ -7,7 +7,7 @@ const suscripciones = JSON.parse(localStorage.getItem('newsletterEmail'));
 formNewsletter.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const found = suscripciones.find(suscripcion => suscripcion === newsletterEmail.value);
+    const found = suscripciones?.find(suscripcion => suscripcion === newsletterEmail.value);
 
     if (found) {
         alert("Ya existe una suscripción con ese email");
