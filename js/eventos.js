@@ -2,34 +2,34 @@
 
 const generateArticles = () => {
 
-    for (const evento of eventos) {
+    for (const {titulo, altImg, descripcion, fecha, id, img, modal} of eventos) {
 
         let textoModal = "";
 
-        for (const texto of evento.modal) {
-            textoModal += `<p>${texto.texto}</p>`;
+        for (const { texto } of modal) {
+            textoModal += `<p>${texto}</p>`;
         };
 
         let article = `
         <article class="article">
             <div class="article__header">
-                <h3>${evento.titulo}</h3>
-                <span>${evento.fecha}</span>  
+                <h3>${titulo}</h3>
+                <span>${fecha}</span>  
             </div>
             <div class="article__content">
-                <img src=${evento.img} alt=${evento.altImg} />
+                <img src=${img} alt=${altImg} />
                 <div class="article__content--text">
-                    <p>${evento.descripcion}</p>
+                    <p>${descripcion}</p>
                     
-                    <button type="button" class="btn__read text-white" data-bs-toggle="modal" data-bs-target="#${evento.id}"> 
+                    <button type="button" class="btn__read text-white" data-bs-toggle="modal" data-bs-target="#${id}"> 
                     Leer más...
                     </button>
                     
-                    <div class="modal fade" id=${evento.id} data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id=${id} data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">${evento.titulo}</h5>
+                                    <h5 class="modal-title" id="staticBackdropLabel">${titulo}</h5>
                                     <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">

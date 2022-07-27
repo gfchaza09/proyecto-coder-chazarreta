@@ -5,15 +5,15 @@ const generateGallery = (arrGallery, container) => {
 
         let galeriaImg = `<h2 class="mobile__title">${galeria.nombre}</h2>`;
 
-        for (const img of galeria.img) {
-            if (`${galeria.id}1` === img.id) {
+        for (const {id, imgUrl} of galeria.img) {
+            if (`${galeria.id}1` === id) {
                 galeriaImg += `<div class="carousel-item active">
-                                    <img class="d-flex w-100 card-img" src=${img.imgUrl} alt=${img.id} class="d-block w-100" />
+                                    <img class="d-flex w-100 card-img" src=${imgUrl} alt=${id} class="d-block w-100" />
                                 </div>`
                             ;
             } else {
                 galeriaImg += `<div class="carousel-item">
-                                    <img class="d-flex w-100 card-img" src=${img.imgUrl} alt=${img.id} class="d-block w-100" />
+                                    <img class="d-flex w-100 card-img" src=${imgUrl} alt=${id} class="d-block w-100" />
                                 </div>`
                             ;
             }
@@ -46,23 +46,19 @@ const generateGallery = (arrGallery, container) => {
 
 const defaultGallery = (gallery, btn) => {
   gallery.classList.add("gallery-active");
-  btn.parentNode.classList.add("list__item--active");
+  btn.classList.add("list__item--active");
 };
 
 const showGallery = (gallery, arrGallery, btn, arrBtn) => {
   gallery.classList.add("gallery-active");
-  btn.parentNode.classList.add("list__item--active");
+  btn.classList.add("list__item--active");
 
   for (const nodeGallery of arrGallery) {
-    if (nodeGallery !== gallery) {
-      nodeGallery.classList.remove("gallery-active");
-    }
+    nodeGallery !== gallery && nodeGallery.classList.remove("gallery-active");
   }
 
   for (const button of arrBtn) {
-    if (button !== btn) {
-      button.parentNode.classList.remove("list__item--active");
-    }
+    button !== btn && button.classList.remove("list__item--active");
   }
 };
 

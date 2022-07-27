@@ -1,15 +1,15 @@
 "use strict";
 
 const generateCards = (arrObjetos, container) => {
-    for (const objeto of arrObjetos) {
+    for (const { img, id, titulo, parrafo, precio} of arrObjetos) {
         let card = `
             <div class="col-auto col-md-6 col-lg-4" >
                 <div class="card mb-3 mt-3 section__card">
-                    <img src=${objeto.img} alt="${objeto.id}-carta" class="card-img-top" />
+                    <img src=${img} alt="${id}-carta" class="card-img-top" />
                     <div class="card-body card__text--food">
-                        <h4>${objeto.titulo}</h4>
-                        ${objeto.parrafo ? `<p>${objeto.parrafo}</p>` : ""}
-                        <span>Precio: ${objeto.precio}$</span>
+                        <h4>${titulo}</h4>
+                        ${parrafo ? `<p>${parrafo}</p>` : ""}
+                        <span>Precio: ${precio}$</span>
                     </div>
                 </div>
             </div>

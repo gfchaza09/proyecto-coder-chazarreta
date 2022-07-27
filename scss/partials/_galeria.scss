@@ -42,6 +42,11 @@ ul {
         border-radius: 3px;
         color: $light;
         transition: color .4s linear, background-color .5s linear;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(49, 49, 49);
+        }
 
         button {
             background-color: inherit;
@@ -49,16 +54,16 @@ ul {
             border: none;
             user-select: none;
         }
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 }
 
 .list__item--active {
     background-color: $light;
     color: $dark;
+    
+    &:hover {
+        background-color: $light;
+    }
 }
 
 .gallery {

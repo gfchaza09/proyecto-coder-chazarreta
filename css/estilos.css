@@ -786,6 +786,11 @@ ul {
   border-radius: 3px;
   color: #dfdfdf;
   transition: color .4s linear, background-color .5s linear;
+  cursor: pointer;
+}
+
+.list__item:hover {
+  background-color: #313131;
 }
 
 .list__item button {
@@ -795,13 +800,13 @@ ul {
   user-select: none;
 }
 
-.list__item:hover {
-  text-decoration: underline;
-}
-
 .list__item--active {
   background-color: #dfdfdf;
   color: #0e0e0e;
+}
+
+.list__item--active:hover {
+  background-color: #dfdfdf;
 }
 
 .gallery {
