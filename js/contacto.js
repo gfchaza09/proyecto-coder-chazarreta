@@ -46,6 +46,15 @@ const showError = (validate, input) => {
   }
 }
 
+// Función para vaciar los input cuando se envía exitosamente el mensaje
+const clearInput = () => {
+  inputNombre.value = '';
+  inputTelefono.value = '';
+  inputEmail.value = '';
+  inputMensaje.value = '';
+  checkboxSub.checked = false;
+}
+
 // Expresiones regulares
 
 // Luego del . se debe usar más de un caracter
@@ -56,24 +65,6 @@ const regExpEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 // Para la validación del número sólo estamos admitiendo números válidos en Argentina
 const regExpTelefono = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
-
-//Código de alerta de bootstrap
-const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
-const closeAlertBtn = document.getElementById("closeAlert");
-
-function alertBootstrap(message, type) {
-  let wrapper = document.createElement("div");
-  wrapper.innerHTML =
-    '<div class="alert alert-' +
-    type +
-    ' alert-dismissible" role="alert">' +
-    message +
-    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" id="closeAlert"></button></div>';
-
-  if (alertPlaceholder.innerHTML === "") {
-    alertPlaceholder.append(wrapper);
-  }
-}
 
 // Campos del formulario
 const inputNombre = document.getElementById("nombre");
@@ -102,10 +93,29 @@ form.addEventListener("submit", e => {
     objFormulario.mensaje = inputMensaje.value;
     objFormulario.suscripcion = checkboxSub.checked;
     console.log(objFormulario);
-    alertBootstrap("¡Muchas gracias por enviarnos tu mensaje!", "success");
+    Toastify({
+      text: 'Muchas gracias por tu mensaje',
+      duration: 3000,
+      close: true,
+      gravity: 'top',
+      position: 'right',
+      style: {
+        background: '#d1e7dd',
+        color: '#0f5132'
+      }
+    }).showToast();
+
+    showError(validateInput(inputNombre), inputNombre);
+    showError(validateInput(inputEmail), inputEmail);
+    showError(validateInput(inputTelefono), inputTelefono);
+    showError(validateInput(inputMensaje), inputMensaje);
+
+    clearInput();
+    
+  } else {
+    showError(validateInput(inputNombre), inputNombre);
+    showError(validateInput(inputEmail), inputEmail);
+    showError(validateInput(inputTelefono), inputTelefono);
+    showError(validateInput(inputMensaje), inputMensaje);
   }
-  showError(validateInput(inputNombre), inputNombre);
-  showError(validateInput(inputEmail), inputEmail);
-  showError(validateInput(inputTelefono), inputTelefono);
-  showError(validateInput(inputMensaje), inputMensaje);
 });

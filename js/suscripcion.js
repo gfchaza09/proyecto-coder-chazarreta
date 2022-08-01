@@ -10,7 +10,15 @@ formNewsletter.addEventListener('submit', (e) => {
     const found = suscripciones?.find(suscripcion => suscripcion === newsletterEmail.value);
 
     if (found) {
-        alert("Ya existe una suscripción con ese email");
+        Swal.fire({
+            title: '¡Error!',
+            text: `Ya existe una suscripción con ese email('${found}').`,
+            icon: 'error',
+            confirmButtonText: 'Ok',
+            confirmButtonColor: '#ffc107',
+            timer: 5000,
+            timerProgressBar: true
+        });
         return;
     }
 
@@ -22,6 +30,15 @@ formNewsletter.addEventListener('submit', (e) => {
         localStorage.setItem('newsletterEmail',JSON.stringify(suscripciones));
     }
     
-    alert(`Email suscrito: ${newsletterEmail.value}`);
-    location.reload();
+    Swal.fire({
+        title: '¡Muy Bien!',
+        text: `Te suscribiste con el email: ${newsletterEmail.value}. Pronto conocerás más novedades.`,
+        icon: 'success',
+        confirmButtonText: 'Ok',
+        confirmButtonColor: '#ffc107',
+        timer: 5000,
+        timerProgressBar: true
+    }).then(res => {
+        location.reload();
+    })
 })
