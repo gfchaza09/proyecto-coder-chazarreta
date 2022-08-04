@@ -87,12 +87,14 @@ const objFormulario = {
 form.addEventListener("submit", e => {
   e.preventDefault();
   if (!validateInput(inputNombre) && !validateInput(inputEmail) && !validateInput(inputTelefono) && !validateInput(inputMensaje)) {
-    objFormulario.nombre = inputNombre.value;
-    objFormulario.telefono = inputTelefono.value;
-    objFormulario.email = inputEmail.value;
-    objFormulario.mensaje = inputMensaje.value;
-    objFormulario.suscripcion = checkboxSub.checked;
-    console.log(objFormulario);
+
+    emailjs.sendForm('service_f5u1f9i', 'template_630ehjp', form, "rQrzlebn7X-EtP3em")
+        .then(() => {
+            console.log('¡Mensaje enviado!');
+        }, function(error) {
+            console.log('Hubo un error...', error);
+        });
+
     Toastify({
       text: 'Muchas gracias por tu mensaje',
       duration: 3000,

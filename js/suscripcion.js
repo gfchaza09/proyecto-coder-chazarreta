@@ -8,7 +8,7 @@ formNewsletter.addEventListener('submit', (e) => {
     e.preventDefault();
     
     const found = suscripciones?.find(suscripcion => suscripcion === newsletterEmail.value);
-
+    
     if (found) {
         Swal.fire({
             title: '¡Error!',
