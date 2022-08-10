@@ -104,31 +104,39 @@ form.addEventListener("submit", (e) => {
       )
       .then(
         () => {
-          console.log("¡Mensaje enviado!");
+          Toastify({
+            text: "Muchas gracias por tu mensaje",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            style: {
+              background: "#d1e7dd",
+              color: "#0f5132",
+            },
+          }).showToast();
+
+          clearInput();
         },
-        function (error) {
-          console.log("Hubo un error...", error);
+        (error) => {
+          Toastify({
+            text: `Ocurrió un error: ${error}`,
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            style: {
+              background: "#7c1b1b",
+              color: "#d1c9c9",
+            },
+          }).showToast();
         }
       );
-
-    Toastify({
-      text: "Muchas gracias por tu mensaje",
-      duration: 3000,
-      close: true,
-      gravity: "top",
-      position: "right",
-      style: {
-        background: "#d1e7dd",
-        color: "#0f5132",
-      },
-    }).showToast();
 
     showError(validateInput(inputNombre), inputNombre);
     showError(validateInput(inputEmail), inputEmail);
     showError(validateInput(inputTelefono), inputTelefono);
     showError(validateInput(inputMensaje), inputMensaje);
-
-    clearInput();
   } else {
     showError(validateInput(inputNombre), inputNombre);
     showError(validateInput(inputEmail), inputEmail);
