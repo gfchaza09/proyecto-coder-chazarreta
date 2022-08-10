@@ -4,10 +4,10 @@
 const validateInput = (input) => {
   switch (input) {
     case nombre:
-      if(input.value.trim().length > 6) {
+      if (input.value.trim().length > 6) {
         return false;
       }
-      return "El nombre es demasiado corto. Se admiten más de 6 caracteres."
+      return "El nombre es demasiado corto. Se admiten más de 6 caracteres.";
     case telefono:
       if (regExpTelefono.test(input.value)) {
         return false;
@@ -19,41 +19,41 @@ const validateInput = (input) => {
       }
       return "El email es inválido.";
     case mensaje:
-      if(input.value.trim().length > 20) {
+      if (input.value.trim().length > 20) {
         return false;
       }
-      return "El mensaje será válido a partir de los 20 caracteres."
+      return "El mensaje será válido a partir de los 20 caracteres.";
   }
-}
+};
 
 // Función para mostrar errores en el formulario
 const showError = (validate, input) => {
   let message = document.createElement("span");
   message.textContent = !validate ? "" : validate;
   message.classList.add("message__error");
-  if(!validate) {
+  if (!validate) {
     input.classList.remove("input__error");
-    if(input.parentElement.lastElementChild.className === "message__error") {
+    if (input.parentElement.lastElementChild.className === "message__error") {
       input.parentElement.lastElementChild.textContent = "";
     }
   } else {
     input.classList.add("input__error");
-    if(input.parentElement.lastElementChild.className === "message__error") {
+    if (input.parentElement.lastElementChild.className === "message__error") {
       input.parentElement.lastElementChild.textContent = validate;
       return;
     }
     input.parentElement.append(message);
   }
-}
+};
 
 // Función para vaciar los input cuando se envía exitosamente el mensaje
 const clearInput = () => {
-  inputNombre.value = '';
-  inputTelefono.value = '';
-  inputEmail.value = '';
-  inputMensaje.value = '';
+  inputNombre.value = "";
+  inputTelefono.value = "";
+  inputEmail.value = "";
+  inputMensaje.value = "";
   checkboxSub.checked = false;
-}
+};
 
 // Expresiones regulares
 
@@ -64,7 +64,8 @@ const clearInput = () => {
 const regExpEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 // Para la validación del número sólo estamos admitiendo números válidos en Argentina
-const regExpTelefono = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
+const regExpTelefono =
+  /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
 
 // Campos del formulario
 const inputNombre = document.getElementById("nombre");
@@ -82,29 +83,44 @@ const objFormulario = {
   email: "",
   mensaje: "",
   suscripcion: false,
-}
+};
 
-form.addEventListener("submit", e => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (!validateInput(inputNombre) && !validateInput(inputEmail) && !validateInput(inputTelefono) && !validateInput(inputMensaje)) {
-
-    emailjs.sendForm('service_f5u1f9i', 'template_630ehjp', form, "rQrzlebn7X-EtP3em")
-        .then(() => {
-            console.log('¡Mensaje enviado!');
-        }, function(error) {
-            console.log('Hubo un error...', error);
-        });
+  if (
+    !validateInput(inputNombre) &&
+    !validateInput(inputEmail) &&
+    !validateInput(inputTelefono) &&
+    !validateInput(inputMensaje)
+  ) {
+    // Se mandará el mensaje a un email determinado dentro de la configuración de emailjs, precisamente en "service", el cuerpo del email es el "template".
+    // El cuarto argumento es el public key
+    emailjs
+      .sendForm(
+        "service_f5u1f9i",
+        "template_630ehjp",
+        form,
+        "rQrzlebn7X-EtP3em"
+      )
+      .then(
+        () => {
+          console.log("¡Mensaje enviado!");
+        },
+        function (error) {
+          console.log("Hubo un error...", error);
+        }
+      );
 
     Toastify({
-      text: 'Muchas gracias por tu mensaje',
+      text: "Muchas gracias por tu mensaje",
       duration: 3000,
       close: true,
-      gravity: 'top',
-      position: 'right',
+      gravity: "top",
+      position: "right",
       style: {
-        background: '#d1e7dd',
-        color: '#0f5132'
-      }
+        background: "#d1e7dd",
+        color: "#0f5132",
+      },
     }).showToast();
 
     showError(validateInput(inputNombre), inputNombre);
@@ -113,7 +129,6 @@ form.addEventListener("submit", e => {
     showError(validateInput(inputMensaje), inputMensaje);
 
     clearInput();
-    
   } else {
     showError(validateInput(inputNombre), inputNombre);
     showError(validateInput(inputEmail), inputEmail);
